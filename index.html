@@ -1,1 +1,31 @@
-index
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>To-do-list</h1>
+    <input type="text" id="task">
+    <button onclick="taskInput()">add task</button>
+    <button onclick="removeList()">remove list</button>
+    
+    <div>
+        <ul id="taskList">
+            
+        </ul>
+    </div>
+    <script>
+        function taskInput(){
+            const task = document.getElementById('task').value;
+            const li = document.createElement('li');
+            
+            li.textContent(task);
+            
+            document.getElementById("taskList").appendChild(li)
+        }
+    </script>
+</body>
+</html>
